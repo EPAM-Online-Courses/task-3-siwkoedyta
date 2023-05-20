@@ -90,7 +90,7 @@ public class ExtraordinaryVillagerTest {
     public void shouldAttackWithZeroDamage() throws Exception {
         // given
         Method attack = clazz.getMethod("attack", Class.forName("efs.task.oop.Fighter"));
-        Method getHealth = clazz.getMethod("getHealth");
+        Method getHealth = superClazz.getMethod("getHealth");
         Constructor<?> constructor = clazz.getConstructor(String.class, int.class, innerClazz);
         Constructor<?> superConstructor = superClazz.getConstructor(String.class, int.class);
         Object staszek = constructor.newInstance("Staszek", 100, skill);
